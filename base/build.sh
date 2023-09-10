@@ -1,1 +1,1 @@
-docker build -f Dockerfile --tag seandoyle/orthanc-base .
+docker build -f Dockerfile --tag raspi/orthanc-base .

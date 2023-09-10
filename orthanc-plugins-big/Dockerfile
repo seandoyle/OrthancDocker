@@ -1,10 +1,10 @@
-FROM seandoyle/orthanc-base
+FROM raspi/orthanc-base
 
 MAINTAINER Sebastien Jodogne <s.jodogne@gmail.com>
 LABEL Description="Orthanc, free DICOM server" Vendor="The Orthanc project"
 
 RUN apt-get clean && apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install libgdcm-dev libjpeg-dev postgresql-server-dev-all libtiff-dev libopenslide-dev libcivetweb-dev protobuf-compiler locales tzdata && rm -rf /var/lib/apt/lists/*
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install libgdcm-dev libjpeg-dev postgresql-server-dev-all libtiff-dev libopenslide-dev libcivetweb-dev protobuf-compiler locales tzdata doxygen && rm -rf /var/lib/apt/lists/*
 
 ADD ./build-orthanc.sh /root/build-orthanc.sh
 RUN bash /root/build-orthanc.sh "default"

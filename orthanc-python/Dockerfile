@@ -1,4 +1,4 @@
-FROM seandoyle/orthanc-big
+FROM raspi/orthanc-big
 
 MAINTAINER Sebastien Jodogne <s.jodogne@gmail.com>
 LABEL Description="Orthanc, free DICOM server, with plugins and Python" Vendor="The Orthanc project"

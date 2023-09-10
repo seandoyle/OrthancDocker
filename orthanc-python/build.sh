@@ -1,1 +1,1 @@
-docker build -f Dockerfile --tag seandoyle/orthanc-python .
+docker build -f Dockerfile --tag raspi/orthanc-python .
